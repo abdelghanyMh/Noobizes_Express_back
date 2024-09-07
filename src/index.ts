@@ -2,7 +2,9 @@ const express = require("express");
 const { ApolloServer, gql } = require("apollo-server-express");
 const axios = require("axios");
 
-const API_KEY = "RGAPI-857dfa22-7b6f-4dbf-a232-b77b33720665";
+// get api key from .env file
+require("dotenv").config();
+const API_KEY = process.env.API_KEY;
 
 // Define your GraphQL schema
 const typeDefs = gql`
